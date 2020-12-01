@@ -23,7 +23,7 @@ const animals = [
   "kiwi",
 ];
 
-const punchline = [
+const punchlines = [
   "The third one ducks.",
   "The bartender says, What is this, a joke?",
   "If you want punch you'll have to stand in line, says the bartender. They look around but there is no punchline.",
@@ -31,14 +31,14 @@ const punchline = [
   "It leaves a mean bruise.",
 ];
 
-let randProf = () => {
-  professions[Math.random() * Math.floor(professions.length)];
-};
+const randProf = () =>
+  professions[Math.floor(Math.random() * professions.length)];
 
-let randAnimal = () => {
-  animals[Math.random() * Math.floor(animals.length)];
-};
+const randAnimal = () => animals[Math.floor(Math.random() * animals.length)];
 
-let randPunchline = () => {
-  punchlines[Math.random() * Math.floor(punchlines.length)];
-};
+const randPunchline = () =>
+  punchlines[Math.floor(Math.random() * punchlines.length)];
+
+console.log(
+  `A ${randProf()} and a ${randAnimal()} walk into a bar. ${randPunchline()}`
+);
